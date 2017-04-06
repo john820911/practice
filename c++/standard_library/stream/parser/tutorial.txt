@@ -1,0 +1,18 @@
+1. open
+    a. ifstream infile("xxx.txt", ifstream::in); //fill constructor
+    b. ifstream infile; //defualt constructor
+       infile.open("xxx.txt", ifstream::in); //open function
+    c. FILE* pfile
+       pfile = fopen("xxx.txt", "r")
+2. whether open or not
+    a. infile.is_open() == TRUE
+    b. pfile != NULL
+3. whether the end of file
+    a. getline(infile, buf)
+        i. infile.eof() != TRUE
+        ii. infile.good() == TRUE
+    b. c = getc(pfile)
+        i. c != EOF
+4. close
+    a. infile.close()
+    b. fclose("xxx.txt")

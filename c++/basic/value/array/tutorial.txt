@@ -1,0 +1,55 @@
+1. comparison of int and char(same usage)
+	a. int
+		(1). int a[3]; a[0] = 1; a[1] = 2; a[2] = 3;
+			 int a[3] = {1, 2, 3};
+			 int a[] = {1, 2, 3};
+				- cout << a << endl; //address
+				- cout << *a << endl; //value(1)
+		(2). int (*b)[3] = &a; //pointer to array
+				- cout << b << endl; //address
+				- cout << *b << endl; //value(address)
+		(3). int (*b) = a;
+				- cout << b << endl; //address
+				- cout << *b << endl; //value(1)
+		(4). int (&b)[3] = a; //reference to array
+				- cout << b << endl; //address
+				- cout << *b << endl; //value(1)
+	b. char
+		(1). char a[3]; a[0] = 1; a[1] = 2; a[2] = 3;
+			 char a[3] = {'a', 'b', 'c'};
+			 char a[] = {'a', 'b', 'c'};
+			 char a[4] = "abc";
+			 char a[] = "abc";
+				- cout << a << endl; //address("abc")
+				- cout << *a << endl; //value('J')
+		(2). char (*b)[3] = &a;
+				- cout << b << endl; //address
+				- cout << *b << endl; //value("abc")
+		(3). char (*b) = a;
+				- cout << b << endl; //address("abc")
+				- cout << *b << endl; //value('J')
+		(4). char (&b)[3] = a;
+				- cout << b << endl; //address("abc")
+				- cout << *b << endl; //value('J')
+		p.s: const char* string = "abc";
+				- cout << string << endl; //"abc"
+				- cout << string[0] << endl; //'a'
+			 const char* strings[] = {"abc", "def"};
+				- cout << strings[0] << endl; //"abc"
+				- cout << strings[0][0] << endl; //'a'
+	p.s: *b can be also acquired by operation b[0]
+2. multidimensional array
+	a. two dimensional array
+		(1). int a[2][3] = {{1, 2, 3}, {4, 5, 6}};
+		(2). int (*b)[2][3] = &a;
+				- cout << b << endl; //address
+				- cout << *b << endl; //value(address)
+				- cout << *(*b) << endl; //value(address)
+		(3). int (*b)[3] = a;
+				- cout << b << endl; //address
+				- cout << *b << endl; //value(address), address
+				- cout << *(*b) << endl; //value(1)
+		(4). int (&b)[2][3] = a;
+				- cout << b << endl; //address
+				- cout << *b << endl; value(address), address
+				- cout << *(*b) << endl; value(1)

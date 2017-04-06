@@ -1,0 +1,24 @@
+1. test_1.cpp:
+    constructor:
+        default
+        fill: (number), (number, value)
+        range: (iter, iter), (addr, addr)
+        copy: (vector name)
+    assign:
+        fill: (number, value)
+        range: (iter, iter), (addr, addr)
+    [], at
+    = , copy constructor, swap
+2. test_2.cpp:
+    front, back(value) & begin, end(iter)
+    begin, rbegin, cbegin, crbegin
+    size, sizeof, max_size, capacity, resize, reserve
+    size, iterator
+3. test_3.cpp:
+    insert: 
+        1. (iter, value), (iter, number, value)
+        2. (iter, new_iter, new_iter), (iter, new_addr, new_addr)
+    erase:
+        1. (iter)
+        2. (iter, iter)
+    push_back, pop_back, empty

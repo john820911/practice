@@ -1,0 +1,19 @@
+1. external/internal(extern/static) linkage
+	a. multiple declaration/multiple definition
+		(1). int a = 10; together, no (default half extern)
+		(2). const int a = 10; together, yes (default static)
+		(3). extern int a; int a = 10; separate, yes/no
+		(4). static int a = 10; together, yes
+		(5). extern const int a; const int a = 10; separate, yes/no
+		(6). static const int a = 10; together, yes
+		(7). int a(); int a() {}; separate, yes/no (default extern) 
+		(8). static int a() {}; together, yes
+	b. usage
+		(1). in the certain translation unit(included .h + .cpp) with declaration
+		(2). in the certain translation unit with declaration
+		(3). share with all translation units with declaration
+		(4). in the certain translation unit with declaration
+		(5). share with all translation units with declaration
+		(6). in the certain translation unit with declaration
+		(7). share with all translation units with declaration
+		(8). in the certain translation unit with declaration

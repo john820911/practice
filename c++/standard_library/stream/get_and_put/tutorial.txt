@@ -1,0 +1,9 @@
+1. FILE* pfile;
+   pfile = open("xxx.txt", "r");
+   char c;
+   c = getc(pfile);
+   putc(c, qfile);
+2. gets(string);
+   puts(string);
+   c = getchar();
+   putchar(c);

@@ -1,0 +1,19 @@
+1. comparison of value, reference, constant value and constant reference, pointer, constant pointer, 
+   and pointer on a constant value
+	a. initialization
+		(1). int a; int a = value(const, non);
+		(2). int& a = value(non);
+		(3). const int a = value(const, non);
+		(4). const int& a = value(const, non);
+		(5). int* a; int* a = pointer(const, non);
+		(6). int* const a = NULL; int* const a = pointer(const, non);
+		(7). const int* a; const int* a = pointer(const, non);
+	b. operation(whether a read/write memory)
+		(1). a = (const, non);
+		(2). a = (const, non);
+		(3). read-only memory;
+		(4). read-only memory;
+		(5). a = pointer(const, non); *a = value(const, non);
+		(6). can't change pointer; *a = value(const, non);
+		(7). a = pointer(const, non); read-only memory
+p.s: pass(call)/return by value/pointer/reference

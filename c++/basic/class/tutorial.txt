@@ -1,0 +1,43 @@
+1. virtual
+	a. destructor:
+		(1). yes
+			(a). Derived derive; Derived* derive = new Derived; delete derive;
+				- construct Base
+				- construct Derived
+				- destruct Derived
+				- destruct Base
+			(b). Base* derive = new Derived; delete derive(public inheritance)
+				- construct Base
+				- construct Derived
+				- destruct Derived
+				- destruct Base
+		(2). no
+			(a). Derived derive; Derived* derive = new Derived; delete derive;
+				- construct Base
+				- construct Derived
+				- destruct Derived
+				- destruct Base
+			(b). Base* derive = new Derived; delete derive
+				- construct Base
+				- construct Derived
+				- destruct Base
+	b. function:
+		(1). yes
+			(a). Derived derive; Derived* derive = new Derived; delete derive;
+				- Derived
+			(b). Base* derive = new Derived; delete derive
+				- Derived
+		(2). no
+			(a). Derived derive; Derived* derive = new Derived; delete derive;
+				- Derived
+			(b). Base* derive = new Derived; delete derive
+				- Base
+2. public, protected, private
+	a. access
+		- all
+		- descent
+		- self
+	b. inheritance
+		- descent's public -> public; protected -> protected;
+		- descent's public -> protected; protected -> protected;
+		- descent's public -> private; protected -> private;
